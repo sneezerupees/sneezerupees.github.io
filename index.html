@@ -50,10 +50,10 @@
 
     <div class="links">
       <a href="https://www.youtube.com/@Nl0u3">youtube</a>
-      <a href="https://www.roblox/users/996670128/profile">roblox account</a>
+      <a href="https://www.roblox.com/users/996670128/profile">roblox account</a>
     </div>
    
-    <p style="color: #aaa; margin-top: 30px; font-size: 0.9em;">👁 views: <span id="views">...</span></p>
+    <p style="color: #aaa; margin-top: 30px; font-size: 0.9em;">👁: <span id="views">...</span></p>
 
     <script>
   fetch('https://api.countapi.xyz/hit/sneezerupees.github.io/visits')
@@ -63,5 +63,30 @@
     });
 </script>
   
+<script>
+  document.addEventListener('click', function(e) {
+    const emojis = ['✨', '🐇', '🐈', '💗', '🐾', '👀'];
+    const emoji = document.createElement('div');
+    
+    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    emoji.style.position = 'fixed';
+    emoji.style.left = e.clientX + 'px';
+    emoji.style.top = e.clientY + 'px';
+    emoji.style.fontSize = '2em';
+    emoji.style.pointerEvents = 'none';
+    emoji.style.transition = 'all 0.8s ease';
+    emoji.style.zIndex = '9999';
+    
+    document.body.appendChild(emoji);
+    
+    setTimeout(() => {
+      emoji.style.opacity = '0';
+      emoji.style.transform = 'translateY(-60px)';
+    }, 50);
+    
+    setTimeout(() => emoji.remove(), 900);
+  });
+</script>
+
   </body>
 </html>
